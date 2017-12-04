@@ -1,9 +1,7 @@
-React and Redux, Webpack 2 boilerplate.
+React and Redux, Webpack 2 exercise.
 
 
 ## What is this?
-
-Boilerplate for kicking off React/Redux applications.
 
 It includes complete, minimal react app.
 By complete we mean it has examples for:
@@ -13,7 +11,6 @@ By complete we mean it has examples for:
 - reducers (redux)
 - actions (both sync and async),
 - SASS (with autoprefixer)<sup>1</sup>
-- dummy API
 - using assets (in CSS and components)
 - imports relative to the app root
 
@@ -36,9 +33,6 @@ By complete we mean it has examples for:
 - [x] Preview production build
 - [x] File imports relative to the app root
 - [x] Git hooks - lint before push
-- [x] Tree shaking build
-- [x] Import SVGs as React components
-
 
 ## Setup
 
@@ -50,15 +44,7 @@ $ npm install
 
 * `start` - starts client app only in development mode, using webpack dev server
 * `client:dev` - same as `start` plus fancy webpack dashboard
-* `client:watch` - not to be used on it's own, starts webpack with client config in watch mode
 * `client:build` - builds client application
-* `client:preview` - runs client application in *production* mode, using webpack dev server (use for local testing of the client production build)
-* `server:watch` - not to be used on it's own, starts webpack with server config in watch mode
-* `server:restart` - not to be used on it's own, server build run using `nodemon`
-* `server:build` - not to be used on it's own, builds server application
-* `server:dev` - starts server app only in development mode (use for testing server responses)
-* `universal:dev` - runs both server and client in watch mode, automatically restarts server on changes
-* `universal:build` - builds both server and client
 
 ## Running in dev mode
 
@@ -140,46 +126,3 @@ but some options are overridden to my personal preferences.
 ```
 $ npm run lint
 ```
-
-## Git hooks
-
-Linting pre-push hook is not enabled by default.
-It will prevent the push if lint task fails,
-but you need to add it manually by running:
-
-```
-npm run hook-add
-```
-
-To remove it, run this task:
-
-```
-npm run hook-remove
-```
-
-## Misc
-
-### Importing images in SCSS
-
-Please note that paths to images in SCSS files are relative to `source/scss/base/main.scss` as it imports all of the other `.scss` files.
-
-```
-.BackgroundImgExample {
-  background-image: url(../assets/img/book1.jpg);
-}
-```
-
-### Importing SVGs as components
-
-Just import your `.svg` files from the `source/assets/svg/` folder, and you are good to go.
-
-```
-import CircleSvg from '../../../assets/svg/circle.svg';
-
-// then in your render
-
-<CircleSvg />
-
-```
-
------

@@ -1,0 +1,207 @@
+$font-family-serif: Garamond, "Times New Roman", serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$grey-border: #eee;
+$grey-text: #aaa;
+$black: #000;
+$white: #fff;
+$grey: #888888;
+
+html {
+  font-size: 8px;
+
+  @include lg {
+    font-size: 12px;
+  }
+
+  @include xl {
+    font-size: 14px;
+  }
+}
+
+body {
+  color: $black;
+  font-family: $font-family-sans-serif;
+}
+
+.App {
+  font-size: 1.8rem;
+  padding: 2rem;
+
+  @include md {
+    padding: 3rem;
+  }
+
+  @include md {
+    padding: 4rem;
+  }
+}
+
+a {
+  color: $grey-text;
+}
+
+a:hover {
+  color: $black;
+}
+
+h1,
+h2,
+h3 {
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+button {
+  background: transparent;
+  border-radius: 1.6rem;
+  border: 0.1rem solid $black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.7rem 2rem;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+button:hover {
+  background: $white;
+}
+
+.Menu {
+  align-items: center;
+  border-bottom: 1px solid $grey-border;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 60rem;
+
+  @include lg {
+    margin-left: 20rem;
+    margin: 0 0 2rem 20rem;
+    padding-bottom: 0;
+  }
+}
+
+.Menu img {
+  display: block;
+}
+
+.Menu-logo {
+  margin-right: 2rem;
+  width: 6rem;
+
+  @include lg {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    border-right: 1px solid $grey-border;
+    width: 20rem;
+    padding: 4rem;
+  }
+}
+
+.Menu-links {
+  @include md {
+  }
+}
+
+.Menu-link {
+  display: inline-block;
+  font-family: $font-family-serif;
+  font-style: italic;
+  margin-left: 1.5rem;
+  line-height: 3rem;
+  text-decoration: none;
+
+  @include md {
+    margin-left: 3rem;
+  }
+
+  @include lg {
+    margin: 0 3rem 0 0;
+    line-height: 7.5rem;
+  }
+}
+
+.Menu-link--active {
+  color: $black;
+}
+
+.Page {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include lg {
+    margin: 0 0 0 20rem;
+  }
+}
+
+.equipment {
+  width: 100%;
+  display: inline-flex;
+}
+
+.equipment__details--new {
+  width: 70%;
+  box-shadow: 0 0 5px $grey;
+}
+
+.equipment__header {
+  margin-bottom: 0;
+  background-color: $grey;
+}
+
+.add__equipment--details {
+  display: grid;
+  width: 60%;
+  float: right;
+  margin-right: 10px;
+
+  label {
+    padding-top: 15px;
+  }
+  button {
+    margin: 10px;
+  }
+}
+
+.service__details,
+.equipment__details {
+  padding-left: 20px;
+}
+
+.equipment__details--header,
+.service__details--header {
+  background-color: $grey;
+}
+
+.equipment__history,
+.service__history {
+  padding: 0;
+  list-style: none;
+  span {
+    font-size: 12px;
+    display: block;
+  }
+}
+
+.equipment__dsecription,
+.service__dsecription {
+  border-bottom: 1px solid;
+  padding-bottom: 15px;
+}
